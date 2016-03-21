@@ -1,3 +1,12 @@
-const add = (a, b) => a + b;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app';
 
-console.log(add(1,2));
+const state = window.__INITIAL_STATE__ || {};
+
+document.addEventListener('DOMContentLoaded', () => {
+    ReactDOM.render(
+        <App {...state}/>,
+        document.getElementById('app')
+    );
+});
