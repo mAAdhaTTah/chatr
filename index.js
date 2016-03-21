@@ -1,8 +1,9 @@
-const express = require('express');
-const exphbs  = require('express-handlebars');
-const browserify = require('browserify');
-const sass = require('node-sass');
-const cssnano = require('cssnano');
+import 'babel-polyfill';
+
+import express from 'express';
+import exphbs from 'express-handlebars';
+import browserify from 'browserify';
+import sass from 'node-sass';
 
 const app = express();
 
@@ -23,7 +24,7 @@ app.get('/client.js', (req, res) => {
         debug: true,
         entries: './client.js'
     })
-        .transform('babelify', { presets: ['es2015', 'react']})
+        .transform('babelify')
         .bundle()
         .pipe(res);
 });
