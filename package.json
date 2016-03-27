@@ -41,6 +41,7 @@
     "react-dom": "^0.14.7",
     "rx": "^4.1.0",
     "socket.io": "^1.4.5",
+    "socket.io-client": "^1.4.5",
     "webpack": "^1.12.14"
   },
   "devDependencies": {
