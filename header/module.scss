@@ -1,0 +1,8 @@
+.ctr-header-container {
+    @include row();
+    margin-bottom: 2em;
+}
+
+.ctr-header-brand {
+    font-size: 3em;
+}
