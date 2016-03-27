@@ -1,6 +1,7 @@
 import express from 'express';
 import exphbs from 'express-handlebars';
 import http from 'http';
+import socketio from 'socket.io';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import App from './app';
@@ -23,3 +24,11 @@ app.get('/', (req, res) => {
 
 const server = http.createServer(app);
 server.listen(3000);
+
+const io = socketio(server);
+
+io.on('connection', (socket) => {
+    socket.on('toserver', function(msg) {
+        console.log(msg);
+    });
+});
