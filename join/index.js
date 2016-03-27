@@ -1,8 +1,14 @@
 import React from 'react';
 import { partial } from 'ramda';
+import { create as createStream } from '../streams/callback';
+import { joinAsUser } from '../messages/join';
 
 const Join = React.createClass({
     displayName: 'Join',
+
+    statics: {
+        stream: createStream(joinAsUser)
+    },
 
     getInitialState: function() {
         return {
@@ -26,7 +32,7 @@ const Join = React.createClass({
                         type="text"
                         value={value}
                         onChange={this.updateValue} />
-                    <button>Join</button>
+                    <button onClick={partial(Join.stream, [value])}>Join</button>
                 </div>
             </div>
         )
