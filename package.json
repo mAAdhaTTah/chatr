@@ -36,9 +36,11 @@
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "node-sass": "^3.4.2",
+    "ramda": "^0.19.1",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
-    "webpack": "^1.12.14",
+    "react-dom": "^0.14.7",
+    "rx": "^4.1.0",
+    "webpack": "^1.12.14"
   },
   "devDependencies": {
     "nodemon": "^1.9.1"
