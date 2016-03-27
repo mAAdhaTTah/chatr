@@ -1,15 +1,21 @@
 import React from 'react';
+import { Observable } from 'rx';
+import Header from '../header';
+import Join from '../join';
 
 const App = React.createClass({
     displayName: 'App',
 
-    propTypes: {
-        headline: React.PropTypes.string
+    statics: {
+        stream: Observable.merge(Join.stream)
     },
 
     render: function() {
         return (
-            <h1>{this.props.headline}</h1>
+            <div className="ctr-container">
+                <Header />
+                <Join />
+            </div>
         );
     }
 });

@@ -1,0 +1,11 @@
+.ctr-container {
+    @include outer-container(100%);
+}
+
+.ctr-header-brand {
+    float: left;
+}
+
+.ctr-header-status {
+    float: right;
+}
