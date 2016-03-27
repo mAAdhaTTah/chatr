@@ -8,6 +8,10 @@
   },
   "scripts": {
     "start": "nodemon server.js --exec babel-node",
+    "scripts": "webpack",
+    "scripts:watch": "webpack --watch",
+    "styles": "node-sass styles.scss public/styles.css",
+    "styles:watch": "node-sass --watch  styles.scss public/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,18 +26,19 @@
   "homepage": "https://github.com/mAAdhaTTah/chatr#readme",
   "dependencies": {
     "babel-cli": "^6.6.5",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.6.0",
     "babel-polyfill": "^6.7.2",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
-    "babelify": "^7.2.0",
     "bourbon": "^5.0.0-beta.4",
     "bourbon-neat": "^1.7.4",
-    "browserify": "^13.0.0",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "node-sass": "^3.4.2",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
+    "webpack": "^1.12.14",
   },
   "devDependencies": {
     "nodemon": "^1.9.1"
