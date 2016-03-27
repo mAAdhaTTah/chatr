@@ -1,0 +1,8 @@
+.ctr-join-container {
+    @include row();
+}
+
+.ctr-join-form {
+    @include span-columns(4);
+    @include shift-in-context(4 of 12);
+}
